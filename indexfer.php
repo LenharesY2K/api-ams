@@ -14,7 +14,7 @@
         body {
             height: 100%;
             margin: 0;
-background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.733));
+            background: black;
             overflow: auto;
             background-repeat: no-repeat;
             background-size: cover;
@@ -31,7 +31,7 @@ background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.733));
         }
 
         .navbar {
-            background-color: black;
+            background-color: rgb(12, 12, 12);
         }
 
         /* Define a cor laranja para o ícone */
@@ -86,7 +86,7 @@ background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.733));
 
                 <!-- Logo central -->
                 <a href="https://exemplo.com" class="navbar-center" aria-label="Página Principal">
-                    <img src="Hub.png" alt="Logo central" />
+                    <img src="fernandogracianp.png" alt="Logo central" />
                 </a>
 
                 <!-- Ícones à direita -->
@@ -102,42 +102,6 @@ background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.733));
             </div>
         </nav>
 
-
-        <div class="align_center text-white">
-            <h1>Matérias</h1>
-            <h2>Listagem</h2>
-            <table>
-                <thead>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Disponivel</th>
-                </thead>
-                <tbody>
-
-                </tbody>
-            </table>
-            <h2>Cadastro de Novas Matérias</h2>
-            <label for="materia">Nome da materia</label>
-            <input type="text" name="materia" id="materia" />
-            <br />
-            <br />
-            <label for="disponivel">Disponível para lecionar?</label>
-            <select name="Disponivel" id="disponivel">
-                <option value="1">Sim</option>
-                <option value="0">Não</option>
-            </select>
-            <br />
-            <br />
-            <button onclick="cadastrar()">Cadastrar</button>
-            <script>
-                function cadastrar() {
-
-                }
-                function atualizarTabela() {
-
-                }
-            </script>
-        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </body>
