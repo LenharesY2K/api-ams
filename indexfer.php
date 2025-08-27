@@ -24,6 +24,24 @@
             background-attachment: fixed;
         }
 
+        .image {
+
+            transition: transform 0.3s ease;/
+        }
+
+        .image:hover {
+            transform: scale(1.1);
+        }
+
+        .icon2 {
+
+            transition: transform 0.3s ease;/
+        }
+
+        .icon2:hover {
+            transform: scale(1.1);
+        }
+
         .align_center {
             align-items: center;
             justify-content: center;
@@ -32,6 +50,7 @@
 
         .navbar {
             background-color: rgb(12, 12, 12);
+            height: 75px;
         }
 
         /* Define a cor laranja para o ícone */
@@ -73,32 +92,25 @@
     <body>
         <nav class="navbar navbar-expand-lg navbar">
             <div class="container-fluid">
-
-                <!-- Ícone de três barras laranja -->
                 <a class="navbar-brand" href="#" aria-label="Menu">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true"
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true" class="icon2"
                         focusable="false">
                         <rect y="4" width="24" height="2" rx="1" />
                         <rect y="11" width="24" height="2" rx="1" />
                         <rect y="18" width="24" height="2" rx="1" />
                     </svg>
                 </a>
-
-                <!-- Logo central -->
                 <a href="https://exemplo.com" class="navbar-center" aria-label="Página Principal">
-                    <img src="fernandogracianp.png" alt="Logo central" />
+                    <img src="fernandogracianp.png" alt="Logo central" class="image" />
                 </a>
-
-                <!-- Ícones à direita -->
                 <div class="navbar-right-icons">
                     <a href="#" aria-label="Buscar">
-                        <i class="fas fa-search"></i>
+                        <i class="fas fa-search icon2"></i>
                     </a>
                     <a href="#" aria-label="Usuário">
-                        <i class="fas fa-user"></i>
+                        <i class="fas fa-user icon2"></i>
                     </a>
                 </div>
-
             </div>
         </nav>
 
