@@ -1,0 +1,145 @@
+   .video-time {
+       position: absolute;
+       bottom: 10px;
+       right: 10px;
+       background-color: rgba(0, 0, 0, 0.7);
+       color: white;
+       padding: 3px 7px;
+       border-radius: 4px;
+       font-size: 14px;
+       display: flex;
+       align-items: center;
+       gap: 5px;
+       z-index: 10;
+       margin-bottom: 9em;
+   }
+
+   .video-time svg {
+       width: 14px;
+       height: 14px;
+       fill: white;
+   }
+
+   .container {
+       display: flex;
+       gap: 20px;
+       flex-wrap: wrap;
+       align-items: center;
+       justify-content: center;
+   }
+
+   .card {
+       background-color: black;
+       position: relative;
+       width: 40rem;
+       margin-bottom: 2em;
+       color: #f9f9f98f;
+       transition: background-color 0.3s ease, color 0.3s ease;
+       transition: transform 0.3s ease, all 0.3s ease;
+   }
+
+   .card:hover {
+       background-color: black;
+       position: relative;
+       width: 40rem;
+       margin-bottom: 2em;
+       color: #f1f1f1;
+   }
+
+   .card:active .card p::after {
+       content: "";
+       position: absolute;
+       bottom: 0;
+       left: 0;
+       height: 2px;
+       width: 100%;
+       background-color: #f1f1f1;
+   }
+
+
+   .card-body {
+       position: relative;
+       z-index: 1;
+   }
+
+   .card-img-top {
+       width: 100%;
+       height: auto;
+       display: block;
+   }
+
+   body {
+       height: 100%;
+       margin: 0;
+       background: black;
+       overflow: auto;
+       background-repeat: no-repeat;
+       background-size: cover;
+       /* cobre toda a área */
+       background-position: center;
+       /* centraliza a imagem */
+       background-attachment: fixed;
+   }
+
+   .image {
+
+       transition: transform 0.3s ease;/
+   }
+
+   .image:hover {
+       transform: scale(1.1);
+   }
+
+   .icon2 {
+
+       transition: transform 0.3s ease;/
+   }
+
+   .icon2:hover {
+       transform: scale(1.1);
+   }
+
+   .align_center {
+       align-items: center;
+       justify-content: center;
+       text-align: center;
+   }
+
+   .navbar {
+       background-color: rgb(12, 12, 12);
+       height: 75px;
+   }
+
+   /* Define a cor laranja para o ícone */
+   .navbar-brand svg {
+       fill: orange;
+       width: 30px;
+       height: 30px;
+   }
+
+   .navbar-center {
+       position: absolute;
+       left: 50%;
+       transform: translateX(-50%);
+   }
+
+   /* Ajusta para telas pequenas para não sobrepor */
+   @media (max-width: 991px) {
+       .navbar-center {
+           position: static;
+           transform: none;
+           margin-top: 0.5rem;
+           margin-bottom: 0.5rem;
+       }
+   }
+
+   .navbar-center img {
+       height: 80px;
+   }
+
+   .navbar-right-icons a {
+       color: white;
+       font-size: 1.5rem;
+       margin-left: 1rem;
+       text-decoration: none;
+   }
