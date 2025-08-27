@@ -6,8 +6,11 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 /*
 Essa variável recebe o metodo utilizado
 pode ser POST, GET, PUT ou DELETE
+
 */
 $metodoSolicitado = $_SERVER['REQUEST_METHOD'];
+
+
 
 /*Esse Id é quando colocamos informações na URL*/
 $id     = $_GET['id'] ?? null;
@@ -32,6 +35,11 @@ switch ($metodoSolicitado) {
 
         $resultado = $conexao->query($sql);
 
-        echo json_encode( $resultado->fetch_assoc());
+        $usuarios = [];
+        while ($linha = $resultado->fetch_assoc()) {
+            $materias[] = $linha;
+        }
+
+        echo json_encode($materias);
         break;
 }
