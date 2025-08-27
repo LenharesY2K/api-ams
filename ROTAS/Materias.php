@@ -1,4 +1,4 @@
-<?php 
+<?php
 /* CABEÇALHOS do HTTP */
 header("Content-Type: application/json; charset=UTF-8");
 header("Access-Control-Allow-Origin: *");
@@ -15,14 +15,23 @@ $id     = $_GET['id'] ?? null;
  ?? significa que se $_GET['id'] existir e não for nula 
 o conteudo entra na variável id
 */
-switch($metodoSolicitado){
+switch ($metodoSolicitado) {
     case "POST":
         $dados_recebidos = json_decode(file_get_contents("php://input"), true);
         break;
     case "GET":
-        echo "{ 'Veio do navegador': true}";
-        break;    
+
+        $servidor = "localhost";
+        $user = "root";
+        $password = "";
+        $banco = "aula_pw3";
+
+        $conexao = new mysqli($servidor, $user, $password, $banco);
+
+        $sql = "Select * from Materias";
+
+        $resultado = $conexao->query($sql);
+
+        echo json_encode( $resultado->fetch_assoc());
+        break;
 }
-
-
-?>

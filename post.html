@@ -14,7 +14,7 @@
         body {
             height: 100%;
             margin: 0;
-background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.733));
+            background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.733));
             overflow: auto;
             background-repeat: no-repeat;
             background-size: cover;
@@ -134,8 +134,15 @@ background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.733));
 
                 }
                 function atualizarTabela() {
-
+                    var url = "http://localhost/api-ams/rotas/materias/php"
+                    fetch(url)
+                        .then(resposta => resposta.json())
+                        .then(dados => {
+                            console.log(dados)
+                        })
                 }
+                atualizarTabela()
+
             </script>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
