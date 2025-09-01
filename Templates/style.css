@@ -2,7 +2,7 @@
        position: absolute;
        bottom: 10px;
        right: 10px;
-       background-color: rgba(0, 0, 0, 0.7);
+       background-color: rgba(0, 0, 0, 0.553);
        color: white;
        padding: 3px 7px;
        border-radius: 4px;
@@ -11,7 +11,7 @@
        align-items: center;
        gap: 5px;
        z-index: 10;
-       margin-bottom: 11em;
+       margin-bottom: 10.1em;
    }
 
    .video-time svg {
@@ -26,6 +26,7 @@
        flex-wrap: wrap;
        align-items: center;
        justify-content: center;
+       padding: 10px;
    }
 
    .card {
@@ -68,21 +69,21 @@
        display: block;
    }
 
-   body {
+   body,
+   html {
        height: 100%;
        margin: 0;
        background: black;
        overflow: auto;
        background-repeat: no-repeat;
        background-size: cover;
-       /* cobre toda a área */
        background-position: center;
-       /* centraliza a imagem */
        background-attachment: fixed;
+       justify-content: center;
    }
 
    .image {
-
+       max-width: 100%;
        transition: transform 0.3s ease;/
    }
 
@@ -107,34 +108,32 @@
 
    .navbar {
        background-color: rgb(12, 12, 12);
-       height: 75px;
-   }
-
-   /* Define a cor laranja para o ícone */
-   .navbar-brand svg {
-       fill: orange;
-       width: 30px;
-       height: 30px;
+       height: 70px;
+       display: flex;
+       justify-content: space-between;
+       align-items: center;
+       padding: 0 1rem;
    }
 
    .navbar-center {
        position: absolute;
        left: 50%;
        transform: translateX(-50%);
-   }
 
-   /* Ajusta para telas pequenas para não sobrepor */
-   @media (max-width: 991px) {
-       .navbar-center {
-           position: static;
-           transform: none;
-           margin-top: 0.5rem;
-           margin-bottom: 0.5rem;
-       }
    }
 
    .navbar-center img {
        height: 80px;
+       transition: transform 0.3s ease;
+   }
+
+   .navbar-center img:hover {
+       transform: scale(1.1);
+   }
+
+   .navbar-right-icons {
+       display: flex;
+       align-items: center;
    }
 
    .navbar-right-icons a {
@@ -142,4 +141,115 @@
        font-size: 1.5rem;
        margin-left: 1rem;
        text-decoration: none;
+       display: flex;
+       align-items: center;
+       transition: transform 0.3s ease;
+   }
+
+   .navbar-right-icons a:hover {
+       transform: scale(1.1);
+
+   }
+
+   @media (max-width: 991px) {
+
+       .navbar-center {
+           position: static;
+           transform: none;
+           margin-top: 0.5rem;
+           margin-bottom: 0.5rem;
+       }
+
+       .navbar-center img {
+           height: 60px;
+
+           transform: translateX(83%);
+       }
+
+
+       .navbar-right-icons {
+           flex: 1;
+           justify-content: flex-end;
+       }
+
+       .navbar-right-icons a {
+           font-size: 1.2rem;
+       }
+
+       .image {
+           max-width: 100%;
+           transition: transform 0.3s ease;
+       }
+
+       .image:hover {
+           transform: scale(1.05);
+       }
+
+       .container.text-center {
+           padding-left: 1rem;
+           padding-right: 1rem;
+       }
+
+       .row>.col {
+           flex: 0 0 100%;
+           max-width: 100%;
+           margin-bottom: 1rem;
+       }
+
+       .card {
+           width: 100% !important;
+           max-width: 100%;
+           justify-content: center;
+       }
+
+       .container.text-center {
+           max-width: 500px;
+           margin-left: auto;
+           margin-right: auto;
+       }
+
+       .card-img-top {
+           height: auto;
+           max-height: 180px;
+           object-fit: cover;
+       }
+
+       .title-video {
+           font-size: 1.1rem;
+       }
+
+       .card-text {
+           font-size: 0.9rem;
+       }
+
+       .video-time {
+           position: absolute;
+           bottom: 10px;
+           right: 10px;
+           background-color: rgba(0, 0, 0, 0.7);
+           color: white;
+           padding: 3px 7px;
+           border-radius: 4px;
+           font-size: 14px;
+           display: flex;
+           align-items: center;
+           gap: 5px;
+           z-index: 10;
+           margin-bottom: 8.5em;
+       }
+
+   }
+
+   .navbar-brand svg {
+       fill: orange;
+       width: 30px;
+       height: 30px;
+   }
+
+   .icon2 {
+       transition: transform 0.3s ease;
+   }
+
+   .icon2:hover {
+       transform: scale(1.1);
    }
